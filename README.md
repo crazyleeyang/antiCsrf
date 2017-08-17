@@ -9,6 +9,7 @@ csrf全称为跨站请求伪造（Cross-site request forgery），是一种挟�
 
 ## 使用说明
 ### nginx配置修改
+* nginx版本:1.9.9
 * 在nginx的conf目录下添加vhost目录，将lua脚本加入此目录
 * 在具体的http server配置文件中的location节点加入对lua脚本的引用，示例
 ```
@@ -22,7 +23,7 @@ location / {
   header_filter_by_lua_file conf/vhost/header_filter.lua;
 }
 ```
-* 重启nginx或者重新加载nginx配置生效
+* 重启nginx或者重新加载nginx配置生效：./nginx -s reload
 
 ### http请求修改
 * 在post请求中添加csrf_token参数
