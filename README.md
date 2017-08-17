@@ -12,7 +12,7 @@ csrf全称为跨站请求伪造（Cross-site request forgery），是一种挟�
 * 在nginx的conf目录下添加vhost目录，将lua脚本加入此目录
 * 在具体的http server配置文件中的location节点加入对lua脚本的引用，示例
 ```
-location /v1/tmall/app/consignee/editconsignee{
+location /xxx/xxxx {
   access_by_lua_file conf/vhost/access.lua;
   #原有的处理逻辑
 }
