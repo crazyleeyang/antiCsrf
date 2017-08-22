@@ -11,7 +11,7 @@ csrf全称为跨站请求伪造（Cross-site request forgery），是一种挟�
 ## 使用说明
 ### nginx配置修改
 * openresty版本:1.11.2.4, 具体安装请参照[openresty.org](https://openresty.org/cn/download.html)
-* 在nginx.conf中添加内容， lua_package_path "/usr/local/openresty/lualib/lualib/?.lua;:";(具体路径根据openresty的安装路径进行修改)
+* 在nginx.conf中添加内容
 ```
         location /xxx {
           access_by_lua_file conf/access.lua;
